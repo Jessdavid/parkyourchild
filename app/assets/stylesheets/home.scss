@@ -1,0 +1,297 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #123366;
+}
+
+#map {
+  height: 93%;
+}
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+#navigation-bar {
+  position: absolute;
+  height: 56px;
+  z-index: 998;
+  top: 3vh;
+  background-color: rgba(11, 126, 210, 0.91);
+}
+#nav_wrapper {
+  color: #fff;
+  background-color: rgba(0, 137, 236, 0.84);
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+
+#Track {
+  color: white;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.label_filter {
+  color: #ffffff; 
+}
+
+#form_fac {
+  position: absolute;
+  padding-left: 10px;
+  margin-left: 80%;
+  margin-top: 80vh;
+  background-color: rgba(46, 109, 164, 0.78);
+  z-index: 100;
+  border-radius: 2%;
+  width: 10%;
+  height: 350px;
+  color: white;
+  top: -40vh;
+  // padding-top: 10px;
+  min-width: 120px;
+  padding-right: 12px;
+}
+
+#navpos {
+  position: absolute;
+  top: 3.5vh;
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+  background-color: rgba(21, 124, 212, 0.89);
+  height: 65px;
+  font-size: -webkit-xxx-large;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 50px;
+  font-family: sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#greenland {
+  background-color: #4FA24F;
+  width: 100%;
+  height: 20px;
+}
+
+.navbar-fixed-bottom {
+    border-radius: 0;
+    background: rgb(42, 134, 214);
+    height: 10px;
+}
+
+.container {
+    background: #2D7CC1;
+    color: white;
+}
+
+#nav-button {
+  background: #FD0202;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: #ffffff;
+}
+
+#text-bottom {
+  text-align: -webkit-center;
+}
+
+img {
+    // image-rendering: auto;
+    max-width: 50vh;
+    position: absolute;
+    margin-top: -32px;
+    margin-left: 100;
+    height: 130px;
+    margin-left: 900px;
+    z-index: 90;
+}
+
+//Gradient in NavBar
+// #white-box1 {
+//   position: absolute;
+//   height: 65px;
+//   width: 100px;
+//   background-color: rgba(51, 51, 51, 0.13);
+//   margin-left: 60%;
+// }
+
+#white-box {
+  position: absolute;
+  height: 65px;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.24);
+  z-index: -1;
+  // margin-left: 50%;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(0, 51, 102, 1)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(255,0,0,0), rgb(3, 33, 73)); /*Standard*/
+}
+
+// #white-box2 {
+//   position: absolute;
+//   height: 65px;
+//   width: 100px;
+//   background-color:  rgba(51, 51, 51, 0.32);
+//   margin-left: 70%;
+// }
+
+// #white-box3 {
+//   position: absolute;
+//   height: 65px;
+//   width: 100px;
+//   background-color:   rgba(51, 51, 51, 0.38);
+//   margin-left: 80%;
+// }
+
+// #white-box4 {
+//   position: absolute;
+//   height: 65px;
+//   width: 70px;
+//   background-color:   rgba(51, 51, 51, 0.34);
+//   margin-left: 90%;
+// }
+
+//Selection Bar
+input.toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 5%;
+}
+
+input.toggle-flip + label {
+  height: 45px;
+  font-size: 20px;
+  padding-top: 5px;
+}
+input.toggle-flip + label:before, input.toggle-flip + label:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  padding-top: 11px
+}
+input.toggle-flip + label:before {
+  background-color: rgba(29, 86, 134, 0.84);
+  content: attr(data-off);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin: auto;
+}
+input.toggle-flip + label:after {
+  background-color: #00C176;
+  color:#fff;
+  content: attr(data-on);
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+input.toggle-flip:checked + label:before {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+input.toggle-flip:checked + label:after {
+  -webkit-transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -ms-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  transform: rotateX(0);
+}
+input.toggle-flip + label:after {
+  background-color: #00C176;
+  color:#fff;
+  content: attr(data-on);
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+//Social links in Footer
+.social1 {
+  height: 40px;
+  margin-top: -22px;
+  margin-left: 1150px;
+}
+
+.social2 {
+  height: 40px;
+  margin-top: -22px;
+  margin-left: 1200px;
+}
+
+.social3 {
+  height: 40px;
+  margin-top: -22px;
+  margin-left: 1100px;
+}
+
+//Selection Bar
+input.toggle {
+  position: absolute;
+  visibility: hidden; 
+}
